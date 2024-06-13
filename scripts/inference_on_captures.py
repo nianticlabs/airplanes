@@ -151,7 +151,7 @@ def run_ransac_ours(pred_root: Path, dest_planar_meshes: Path, captures: Path):
         [
             "python",
             "-m",
-            "airplanes.baselines.sequential_ransac",
+            "airplanes.clustering.sequential_ransac",
             "--validation-file",
             str(captures / "scans.txt"),
             "--pred_root",
@@ -200,7 +200,7 @@ def run_ransac_baseline(pred_root: Path, dest_planar_meshes: Path, captures: Pat
         [
             "python",
             "-m",
-            "airplanes.baselines.sequential_ransac",
+            "airplanes.clustering.sequential_ransac",
             "--validation-file",
             str(captures / "scans.txt"),
             "--pred_root",
