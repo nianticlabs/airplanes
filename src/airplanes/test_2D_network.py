@@ -136,7 +136,6 @@ def main(opts: DictConfig):
                 image_width=opts.image_width,
                 image_height=opts.image_height,
                 pass_frame_id=True,
-                apply_color_augmentation=False,
                 rotate_images=opts.rotate_images,
             )
 
