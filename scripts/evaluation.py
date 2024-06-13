@@ -85,7 +85,8 @@ def train_embeddings(pred_root: Path):
             "--embedding-pull-threshold",  ## t_e in the paper
             "0.9",
             "--push-threshold",  ## t_p in the paper
-            "1.0" "--pixels-per-iteration",
+            "1.0",
+            "--pixels-per-iteration",
             "400",
             "--frames-per-iteration",
             "50",
