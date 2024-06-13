@@ -1,0 +1,9 @@
+defaults:
+  - base_config
+  - models: depth_planes_embeddings
+  - data: scannet_train
+  - _self_
+
+batch_size: 16
+gpus: 2
+lazy_load_weights_from_checkpoint: checkpoints/simplerecon_starting_weights.ckpt

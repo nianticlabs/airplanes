@@ -1,0 +1,11 @@
+dataset: scannet
+dataset_path: /mnt/scannet/
+tuple_info_file_location: src/airplanes/data_splits/ScanNetv2/standard_split
+dataset_scan_split_file: src/airplanes/data_splits/ScanNetv2/standard_split/scannetv2_test_planes.txt
+mv_tuple_file_suffix: _planes_eight_view_deepvmvs.txt
+num_images_in_tuple: 8
+# default means every keyframe defined by DVMVS.
+frame_tuple_type: default
+split: test
+# when we run in test mode we don't expect to load plane data.
+type: depth

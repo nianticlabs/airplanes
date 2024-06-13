@@ -1,0 +1,16 @@
+# fuse color in the tsdf? can only be used with open3d
+fuse_color: False
+num_features: 2
+
+# depth to limit depth maps to when fusing.
+fusion_max_depth: 3.0
+# tsdf resolution for fusion
+fusion_resolution: 0.04
+# type of depth fuser to use. 'ours' allows batching and is used in the
+# paper for scores. 'open3d' allows color but not batching.
+depth_fuser: "ours"
+
+# point cloud fusion hyperparams.
+pc_fusion_z_thresh: 0.04
+n_consistent_thresh: 3
+voxel_downsample: 0.02

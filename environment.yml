@@ -1,0 +1,31 @@
+name: airplanes
+channels:
+  - default
+  - pytorch
+  - nvidia
+  - fastai
+  - conda-forge
+  - pytorch3d
+dependencies:
+  - python=3.9.7
+  - clang=15.0.7
+  - llvm-openmp=15.0.7
+  - libxcrypt
+  - gxx=8.5
+  - pytorch=2.0.1
+  - cudatoolkit=11.7
+  - torchvision
+  - lightning=2.0.0
+  - pytorch-cuda=11.7
+  - opencv-python-headless=4.5.5.64
+  - pytorch3d=0.7.4
+  - numpy
+  - scipy
+  - h5py=3.6.0
+  - pydantic=1.9.0
+  - packaging=22.0
+  - pip=22.0.4
+  - rsync=3.2.7
+  - ffmpeg=5.1.2
+  - pip:
+    - https://github.com/JamieWatson683/scikit-image/archive/single_mesh.zip # single mesh exporting for measure.marching_cubes

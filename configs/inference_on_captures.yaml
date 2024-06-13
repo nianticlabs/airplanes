@@ -1,0 +1,33 @@
+defaults:
+  - base_config
+  - models: depth_planes_embeddings
+  - data: vdr_inference
+  - inference:
+    - visualisation
+    - fusion
+  - _self_
+
+# base paths for all outputs.
+output_base_path: "results"
+batch_size: 1
+run_fusion: True
+cache_depths: True
+dump_depth_visualization: False
+
+# mask the predicted depth map using the a mask from the cost volume where
+# true indicates available projected source view information. NOT used by
+# default or for scores.
+mask_pred_depth: False
+
+# fast cost volume for inference.
+fast_cost_volume: False
+
+# only run whatever it is this script is doing on a single frame.
+single_debug_scan_id: null
+
+# skip every skip_frames tuple when inferring depths. Useful for dense
+# tuples
+skip_frames: null
+
+# skip to a frame in the scan
+skip_to_frame: null

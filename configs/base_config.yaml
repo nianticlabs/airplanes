@@ -1,0 +1,89 @@
+random_seed: 0
+
+################################### logs ###################################
+# experiment name
+name: "debug"
+output_base_path: ""
+
+# log directory for training.
+log_dir: ""
+# want to note something about the experiment?
+notes: ""
+
+# interval in number of training steps to log.
+log_interval: 100
+# interval in number of training steps to validate.
+val_interval: 1000
+
+# number of validation batches per validation step
+val_batches: 100
+
+################################### data ###################################
+# number of dataloader workers to use.
+num_workers: 12
+
+# similar to model_num_views, but used exclusively for data
+# loading/processing.
+num_images_in_tuple: null
+
+# the split to use, script dependant.
+split: "train"
+
+# image size input to the network. Used in dataloaders and projectors.
+image_width: 512
+image_height: 384
+
+# used to shuffle tuple order for ablation.
+shuffle_tuple: False
+
+# number of keyframes to keep around in the buffer for DVMVS tuples.
+test_keyframe_buffer_size: 30
+
+############################## hyperparameters #############################
+
+# number of sanity validation steps before training
+num_sanity_val_steps: 0
+
+# max number of iterations for training
+max_steps: 110000
+
+# batch size
+batch_size: 4
+# validation batch size during training
+val_batch_size: 4
+
+# number of GPUs to use for training.
+gpus: 1
+
+# precision to use for training.
+precision: 16
+
+################################## models ##################################
+# resumes with training state
+resume: null 
+
+# loads model weights
+load_weights_from_checkpoint: null
+
+# if true, will load in depth maps at the highest resolution available in
+# the dataset and using those when computing metrics against upscaled
+# predictions.
+high_res_validation: False
+
+# only run whatever it is this script is doing on a single frame.
+single_debug_scan_id: null
+
+# skip every skip_frames tuple when inferring depths. Useful for dense
+# tuples
+skip_frames: null
+
+# skip to a frame in the scan
+skip_to_frame: null
+
+
+
+save_intermediate_meshes: False
+
+rotate_images: False
+
+shift_world_origin: False

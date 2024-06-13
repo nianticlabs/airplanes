@@ -1,0 +1,41 @@
+# image prior encoder
+image_encoder_name: "efficientnet"
+
+# final depth decoder.
+depth_decoder_name: "unet_pp"
+
+# loss
+loss_type: "log_l1"
+
+# matching encoder. resnet or fpn
+matching_encoder_type: "resnet"
+# number of channels for matching features
+matching_feature_dims: 16
+
+# number of views the model should expect in a tuple.
+model_num_views: 8
+
+# scale to match features at. 1 means half the final depth output size, or a
+# quarter of image resolution.
+matching_scale: 1
+# number of depth bins to use in the cost volume.
+matching_num_depth_bins: 64
+# min and max depth planes in the cost volume
+min_matching_depth: 0.25
+max_matching_depth: 5.0
+
+# type of cost volume encoder.
+cv_encoder_type: "multi_scale_encoder"
+
+# type of cost volume to use. SimpleRecon's metadata model uses the
+# 'mlp_feature_volume' model. Also available in this repo is a simple dot
+# reduction model 'simple_cost_volume'
+feature_volume_type: "mlp_feature_volume"
+
+# learning rate
+lr: 0.0001
+# weight decay
+wd: 0.0001
+
+# stepped learning rate schedule. LR will drop by 10 at both steps
+lr_steps: [70000, 80000]

@@ -1,0 +1,17 @@
+# standard fps to dump video files out.
+standard_fps: 30
+
+# for visualize_live_meshing.py, attempt to use precomputed meshes already
+# on disk.
+use_precomputed_partial_meshes: False
+
+# size of the visualization depth maps to store at.
+viz_render_width: 640
+viz_render_height: 480
+
+# for visualize_live_meshing.py, the size of the camera marker.
+cam_marker_size: 0.7
+
+# for backfacing meshes, this allows them to be rendered and composited with
+# an alpha to a culled-back-faces render.
+back_face_alpha: 0.5
