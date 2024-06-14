@@ -138,7 +138,6 @@ def run(
             tuple_info_file_location=opts.data.tuple_info_file_location,
             limit_to_scan_id=scan,
             data_opts=opts.data,
-            apply_color_augmentation=False,
         )
 
         # NOTE: we want to disable the flipping. We set the split as val
