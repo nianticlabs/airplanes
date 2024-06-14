@@ -110,7 +110,7 @@ def train_embeddings(pred_root: Path):
     default=Path("results/depth_planes_embeddings/scannet/meshes/planar_meshes_ours"),
 )
 def run_ransac_ours(pred_root: Path, dest_planar_meshes: Path):
-    logger.warning("Running RANSAC using Embeddings")
+    logger.info("Running RANSAC using Embeddings")
     subprocess.run(
         [
             "python",
@@ -154,7 +154,7 @@ def run_ransac_ours(pred_root: Path, dest_planar_meshes: Path):
     default=Path("results/depth_planes_embeddings/scannet/meshes/planar_meshes_baseline"),
 )
 def run_ransac_baseline(pred_root: Path, dest_planar_meshes: Path):
-    logger.warning("Running RANSAC on top of SimpleRecon")
+    logger.info("Running RANSAC on top of SimpleRecon")
     subprocess.run(
         [
             "python",
@@ -198,7 +198,7 @@ def run_ransac_baseline(pred_root: Path, dest_planar_meshes: Path):
     default=Path("results/depth_planes_embeddings/scannet/scores"),
 )
 def meshing_benchmark(pred_root: Path, gt_root: Path, output_score_dir: Path):
-    logger.warning("Running meshing benchmark")
+    logger.info("Running meshing benchmark")
     subprocess.run(
         [
             "python",
@@ -234,7 +234,7 @@ def meshing_benchmark(pred_root: Path, gt_root: Path, output_score_dir: Path):
     default=Path("results/depth_planes_embeddings/scannet/scores"),
 )
 def segmentation_benchmark(pred_root: Path, gt_root: Path, output_score_dir: Path):
-    logger.warning("Running segmentation benchmark")
+    logger.info("Running segmentation benchmark")
     subprocess.run(
         [
             "python",
@@ -271,7 +271,7 @@ def segmentation_benchmark(pred_root: Path, gt_root: Path, output_score_dir: Pat
     default=Path("results/depth_planes_embeddings/scannet/scores"),
 )
 def planar_benchmark(pred_root: Path, gt_root: Path, output_score_dir: Path):
-    logger.warning("Running planar benchmark")
+    logger.info("Running planar benchmark")
     subprocess.run(
         [
             "python",

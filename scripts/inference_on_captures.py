@@ -101,7 +101,7 @@ def model_inference(checkpoint: str, output_dir: Path, config: str):
     "--captures", help="Path to captures", default=Path("arbitrary_captures/vdr"), type=Path
 )
 def train_embeddings(pred_root: Path, captures: Path):
-    logger.warning("Training 3D Embeddings (MLPs)")
+    logger.info("Training 3D Embeddings (MLPs)")
     subprocess.run(
         [
             "python",
@@ -146,7 +146,7 @@ def train_embeddings(pred_root: Path, captures: Path):
     "--captures", help="Path to the captures", default=Path("arbitrary_captures/vdr"), type=Path
 )
 def run_ransac_ours(pred_root: Path, dest_planar_meshes: Path, captures: Path):
-    logger.warning("Running RANSAC using Embeddings")
+    logger.info("Running RANSAC using Embeddings")
     subprocess.run(
         [
             "python",
@@ -195,7 +195,7 @@ def run_ransac_ours(pred_root: Path, dest_planar_meshes: Path, captures: Path):
     "--captures", help="Path to the captures", default=Path("arbitrary_captures/vdr"), type=Path
 )
 def run_ransac_baseline(pred_root: Path, dest_planar_meshes: Path, captures: Path):
-    logger.warning("Running RANSAC on top of SimpleRecon")
+    logger.info("Running RANSAC on top of SimpleRecon")
     subprocess.run(
         [
             "python",
