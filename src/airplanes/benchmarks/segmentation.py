@@ -402,6 +402,7 @@ def run_instance_benchmark(
         print_running_metrics=False,
     )
     if output_score_dir is not None:
+        output_score_dir.mkdir(parents=True, exist_ok=True)
         benchmark_meter.output_json(str(output_score_dir / f"segmentation_results.json"))
 
 

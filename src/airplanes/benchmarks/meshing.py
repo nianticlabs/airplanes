@@ -499,6 +499,7 @@ def cli(
     )
     if output_score_dir is not None:
         logger.info(f"Saving results to: {output_score_dir}")
+        output_score_dir.mkdir(parents=True, exist_ok=True)
         if use_planar_metrics:
             benchmark_meter.output_json(str(output_score_dir / f"planar_results.json"))
         else:
